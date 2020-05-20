@@ -11,8 +11,14 @@
     <h1 id="url">
 
     </h1>
+    
+    <div id="url2">
+
+    </div>
 
     <script>
+        
+        /* 
         var url = prompt("Whats the url?");
         var checkUrl = url.substr(0,4);
         var text = document.getElementById('url');
@@ -25,26 +31,52 @@
         
         // console.log ('Hola1')
         
-        /* 
         console.log ('Hola1')
         console.log ('Hola1')
         console.log ('Hola1')
         console.log ('Hola1')
-        */
+        
 
         var name='Kalob' // This is my name
 
         var isCat = false
+        */
 
+        var text = document.getElementById('url');
+        var foto = document.getElementById('url2');
+        var catName = prompt('Cual es el nombre de tu gato?');
+
+        if (catName.toLowerCase() == "pepino"){
+            var esElGato = true
+        } else {
+            var esElGato = false
+        }
+
+        if (esElGato){
+            text.innerText = ("Si, y es el gatito mas lindo!")
+        } else {
+            text.innerText = ("No, es Pepino!")
+        }
+
+        if (!esElGato){
+            foto.innerHTML = "<img height=100% width=100% src='https://www.purina.es/gato/purina-one/sites/g/files/mcldtz1856/files/2018-06/Mi_gato_no_come%20%282%29.jpg'></img>"
+        }
+
+
+        /*
         if (isCat){
             console.warn ("Pepino is a cat")
         } else {
             console.warn ("Pepino is not a cat")
         };
+        */ 
+
 
 
 
     </script>
 
+
+    <img src="#" height="" width="" alt="">
 </body>
 </html>
