@@ -17,7 +17,24 @@
     </div>
 
     <script>
+        names = ["Pepino","Lucia","Patricio", true, false] // armar un array
+        numbers = Array(1,2,3,4) // Otra mandera de armar arrays
+
+        seleccionArray = names[3] // Seleccionar elementos del aaray
+
+        // numbers.length(); ---> longitud del array
+
+        // numbers.push("otro número") ---> agregar un elemento al array
+
+        // sacar2Items = numbers.slice(2,3) ---> sacar el array un determinado número de elementos
+
+        // ultimoElemento = numbers.pop() ---> sacar el último elemento del array
         
+        var text = document.getElementById('url');
+        text.innerText = seleccionArray
+
+
+
         /* 
         var url = prompt("Whats the url?");
         var checkUrl = url.substr(0,4);
@@ -40,7 +57,7 @@
         var name='Kalob' // This is my name
 
         var isCat = false
-        */
+        
 
         var text = document.getElementById('url');
         var foto = document.getElementById('url2');
@@ -53,7 +70,7 @@
         }
 
         if (esElGato){
-            text.innerText = ("Si, y es el gatito mas feo!")
+            text.innerText = ("Si, y es el gatito mas lindo!")
         } else {
             text.innerText = ("No, es Pepino!")
         }
@@ -61,7 +78,7 @@
         if (!esElGato){
             foto.innerHTML = "<img height=100% width=100% src='https://www.purina.es/gato/purina-one/sites/g/files/mcldtz1856/files/2018-06/Mi_gato_no_come%20%282%29.jpg'></img>"
         }
-
+        */
 
         /*
         if (isCat){
