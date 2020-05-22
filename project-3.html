@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<h1 id="OK">
+
+</h1>
+
+
+<script>
+
+    // Ask Number
+    var number1 = prompt("Whats your age")
+
+    //Cast to Number
+    number1 = Number(number1)
+
+    //Get HTML
+    var HTML = document.getElementById("OK")
+
+    //Check
+    /*
+    var validacionNumero = typeof(number1)
+    if (validacionNumero = "number") {
+        if (number1 > 18) {
+            HTML.innerText = "OK!"
+        }
+    }
+    */
+
+    if (number1 != "Nan") {
+        if (number1 >= 18) {
+            HTML.innerText = "OK!"
+        }
+    }
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
