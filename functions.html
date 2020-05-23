@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="heading1">
+
+    </h1>
+
+    <script>
+        function doMath(num){
+            num = Number(num)
+            if (num){
+                var result = (num + 100) / 3
+                return result
+            } else {
+                return false
+            }
+        }
+
+        var finalResult = doMath(100)
+        console.log (finalResult)
+        console.log (doMath(15))
+
+
+        // Funcion para insertar texto o Html simplificado
+
+        function insertText(id, texto){
+            var idTag = document.getElementById(id)
+            idTag.innerText = texto
+            //return text
+        }
+
+        insertText("heading1", "Hello, how its going")
+
+    </script>
+</body>
+</html>
