@@ -8,12 +8,36 @@
 </head>
 <body>
 
+    <input type="text" class="inputText" value="Monto total de la cuenta">
+
 
     <h1 id="title"></h1>
+
+    <ul>
+        <li>Number 0</li>
+        <li>Number 1</li>
+        <li>Number 2</li>
+        <li>Number 3</li>
+        <li>Number 4</li>
+        <li>Number 5</li>
+        <li>Number 6</li>
+        <li>Number 7</li>
+    </ul>
     
     <script>
+        // Query de una única sección
+        
         var insert = document.querySelector('h1')
         insert.innerText = ("YEAHH")
+
+        // Query de varios elementos, luego selecciono uno de una lista
+
+        var changeListElement = document.querySelectorAll('li')
+        changeListElement[3, 7].innerText = (montoTotal)
+
+        var montoTotal = document.querySelector('.inputText')
+        changeListElement[3, 7].innerText = montoTotal
+
     </script>
 
 
