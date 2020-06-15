@@ -8,12 +8,14 @@
 </head>
 <body>
 
-    <h1> La temperatura es <span id="temperature"></span>
+    <h1> La temperatura es de <span id="temperature"></span> grados Fahrenheit
 
     </h1>
 
     <script>
-        function doMath(num){
+       /*
+       
+       function doMath(num){
             num = Number(num)
             if (num){
                 var result = (num + 100) / 3
@@ -27,9 +29,11 @@
         console.log (finalResult)
         console.log (doMath(15))
 
+        */
 
         // Funcion para insertar texto o Html simplificado
 
+        /*
         function insertText(id, texto){
             var idTag = document.getElementById(id)
             idTag.innerText = texto
@@ -38,10 +42,27 @@
 
         function CtoF(temperatureInC){
             var temperatureInF = (temperatureInC*1.8) + 32
-            return temperatureInF
+            return temperatureInF //temperatureInF
         }
-        var ingresoTemperatura = 38
+        var ingresoTemperatura = prompt ("Temperatura en grados")
         insertText("temperature", CtoF(ingresoTemperatura))
+
+        */
+
+        function insertText(id, texto){
+            var idTag = document.getElementById(id)
+            idTag.innerText = texto
+            //return text
+        }
+
+        function CtoF(temperatureInC){
+            return (temperatureInC*1.8) + 32
+            // return temperatureInF //temperatureInF
+        }
+        var ingresoTemperatura = prompt ("Temperatura en grados")
+        insertText("temperature", CtoF(ingresoTemperatura))
+
+        
     </script>
 </body>
 </html>

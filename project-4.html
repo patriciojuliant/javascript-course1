@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> La propina tiene que ser de <span id="propina"></span> pesos</h1>
+    <script>
+
+
+        var ingresoMonto = prompt ("Cual es el total de la cuenta")
+        var porcentajePropina = prompt ("¿Cuánto querés dejar de propina?")
+        
+        function total (montoTotal) {
+            return (montoTotal/100)*porcentajePropina
+        }
+
+        function insertData (id, data){
+            insert = document.getElementById(id)
+            insert.innerText = data
+        }
+
+        insertData ('propina', total(ingresoMonto))
+
+
+        // var html = document.getElementById('propina')
+        // html.innerText = (total(ingresoMonto))
+
+
+    </script>
+    
+</body>
+</html>
