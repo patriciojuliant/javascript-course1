@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>El numero es <span id="texto"></span></h1>
+    <script>
+        /*
+        function doMath (num) {
+            num = Number(num);
+            if (num){
+                var newNumber = (num + 100) / 3
+                return newNumber
+            } else {
+                return false;
+            }
+        }
+
+        var customNum = doMath(345)
+        console.log(customNum)
+        */
+        
+        /*
+        function insertText (id, text){
+            var getId = document.getElementById(id)
+            getId.innerText = text
+        }
+
+        function CtoF (numInC){
+            return numInC * 1.8 + 32
+        }
+
+        ingresoNum = prompt ("Temperatura en grados centigrados");
+        var calculo = CtoF (ingresoNum);
+        insertText ("texto", calculo);
+        */
+        
+        /*function Tip (monto, porcentaje){
+            return monto x 100 / porcentaje
+        }
+        */
+
+        monto = prompt ("cual es el total de la cuenta?");
+        porcentaje = prompt ("Que porcentaje?") 
+
+        function tip (totalCuenta, porcentajePropina){
+            return (totalCuenta / 100) * porcentajePropina
+        }
+
+        function insertText (id, text){
+            var getId = document.getElementById(id)
+            getId.innerText = text
+        }
+
+        total = tip(monto, porcentaje)
+        insertText ("texto", total)
+
+
+    </script>
+</body>
+</html>

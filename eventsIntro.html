@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Intro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <button class="btn-1" type="button" onClick="clickMe()">
+        ENTER
+    </button>
+
+    <h1>Presionaste este botón <span id="text1">0</span> veces</h1>
+
+    <button type="button" class="reset" onclick="resetTo0()">RESET</button>
+
+
+    <script>
+        function clickMe(){
+            console.log("Click")
+            changeNumber ()
+        }
+
+        var totalClicks = 0 
+
+        function changeNumber (){
+            var extra = document.getElementById('text1')
+            totalClicks = totalClicks + 1
+            extra.innerText = totalClicks
+        }
+
+        function resetTo0(){
+            totalClicks = 0 -1
+            changeNumber()
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events 1</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo-1">Calculadora de Propinas</h1>
+    </div>
+    <div>
+        <label for="totalCuenta">Total de la cuenta:</label> 
+        <input type="number" id="montoCuenta" class="form-control" placeholder="Total de la cuenta">
+    </div>
+
+    <div>
+        <label for="porcentajePropina">Porcentaje Propina:</label>
+        <input type="number" id="montoPropina" class="form-control" min="0" max="100" placeholder="Se recomienda 10%">
+    </div>
+    <br>
+    <button type="button" onclick="clickMe()"> CALCULAR </button>
+
+    <h1 class="totalPropina"></h1>
+    <h1 class="totalCuenta"></h1>
+
+    <script>
+
+        function clickMe (){
+            var montoCuenta = document.getElementById("montoCuenta")
+            montoCuenta = Number(montoCuenta.value)
+
+            var montoPropina = document.getElementById("montoPropina")
+            montoPropina = Number(montoPropina.value)
+
+            var resultadoPropina = ((montoCuenta * montoPropina) / 100)
+            var resultadoCuenta = montoCuenta + resultadoPropina
+
+            console.log (montoCuenta, montoPropina)
+
+            insertTotal = document.querySelector(".totalPropina")
+            insertTotal.innerText = "El total de la propina es de: $" + resultadoPropina.toFixed(2)
+            
+            insertTotal = document.querySelector(".totalCuenta")
+            insertTotal.innerText = "El total de la cuenta es de: $" + resultadoCuenta.toFixed(2)
+        
+        }
+
+
+
+    </script>
+
+</body>
+</html>
