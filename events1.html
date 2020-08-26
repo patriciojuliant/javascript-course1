@@ -24,6 +24,15 @@
     <h1 class="totalPropina"></h1>
     <h1 class="totalCuenta"></h1>
 
+    <div>
+        <label for="inputApellido">Apellido: </label>
+        <input type="text" id="inputApellido">
+    </div>
+    <br>
+    <div>
+        <button onclick="nombre()">ENVIAR DATOS</button>
+    </div>
+
     <script>
 
         function clickMe (){
@@ -39,13 +48,20 @@
             console.log (montoCuenta, montoPropina)
 
             insertTotal = document.querySelector(".totalPropina")
-            insertTotal.innerText = "El total de la propina es de: $" + resultadoPropina.toFixed(2)
+            insertTotal.innerText = "El total de la propina es de: $ " + resultadoPropina.toFixed(2)
             
             insertTotal = document.querySelector(".totalCuenta")
-            insertTotal.innerText = "El total de la cuenta es de: $" + resultadoCuenta.toFixed(2)
+            insertTotal.innerText = "El total de la cuenta es de: $ " + resultadoCuenta.toFixed(2)
         
+        };
+
+        function nombre(){
+            this.apellido = document.getElementById("inputApellido").value
+            this.añoDeNacimiento = 1989 
+            return this
         }
 
+        var Patricio = nombre()
 
 
     </script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" class="form-control form-control-lg js-name">
+    
+    <h1><span class="js-change-name"></span></h1>
+
+    <br>
+    
+    <label for="bg-color">Change Background: </label>
+    <input type="text" class="bg-color">
+
+    <br>
+
+    <label for="text">Change Text Color: </label>
+    <input type="text" class="text">
+    
+    <br>
+
+    <label for="text-size">Change Text Size: </label>
+    <input type="text" class="text-size">
+
+    <br>
+     
+    Hola Hola Hola
+
+    <script>
+        
+        var input = document.querySelector(".js-name")
+
+        var nameElem = document.querySelector(".js-change-name")
+
+        function callBack(event){
+            nameElem.innerHTML = event.target.value
+        }
+
+        input.addEventListener("keydown", callBack)
+
+        var whatBgColor = document.querySelector(".bg-color")
+
+        var body = document.querySelector("body")
+
+        function changeBgColor(event){
+            body.style.backgroundColor = event.target.value
+        }
+
+        whatBgColor.addEventListener("keyup", changeBgColor);
+
+        var whatTxtColor = document.querySelector(".text")
+
+        function changeTxtColor(event){
+            body.style.color = event.target.value
+        }
+
+        whatTxtColor.addEventListener("keyup", changeTxtColor);
+
+
+        var whatTxtSize = document.querySelector(".text-size")
+
+        function changeTxtSize(event){
+            body.style.fontSize = event.target.value + ("px")
+        }
+
+        whatTxtSize.addEventListener("keyup", changeTxtSize);
+
+    </script>
+
+
+</body>
+</html>
