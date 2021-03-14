@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box1 {
+    background-color: aquamarine;
+    grid-area: box1;
+} 
+
+.box2 {
+    background-color: blue;
+    grid-area: box2;
+} 
+
+.box3 {
+    background-color: violet;
+    grid-area: box3;
+    ;
+} 
+
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "box3 box1 ."
+    "box3 box2 ."
+    "box3 . . ";
+}
